@@ -1,0 +1,16 @@
+
+# Use an official Ubuntu runtime as a parent image
+FROM ubuntu:latest
+
+# Install necessary packages
+RUN apt-get update && \
+apt-get install -y file
+
+# Create a directory to store classified files
+RUN mkdir -p /app/outputs/img /app/outputs/snd /app/outputs/txt
+
+# Copy the clasificador.sh script into the container
+COPY clasificador.sh /app/
+
+# Run the clasificador.sh script
+CMD ["/bin/bash", "/app/clasificador.sh"]i
