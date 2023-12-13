@@ -1,0 +1,1 @@
+"Bienvenido a la experiencia de análisis de textos. En este pequeño fragmento, puedes encontrar direcciones de correo electrónico como user@example.com y también algunas palabras palindrómicas como "radar" y "oso". ¡Experimenta con las opciones y disfruta del análisis!"
