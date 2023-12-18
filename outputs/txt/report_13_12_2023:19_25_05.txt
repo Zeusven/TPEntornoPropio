@@ -1,4 +1,0 @@
-Uso de CPU: 0%
- Uso de RAM: 309 MB
-Procesos: 10
- Uso de DICO: 1%
