@@ -32,5 +32,5 @@ END {
     } else {
         print "No se encontraron palabras en el texto."
     }
-}' "$1"
+}' "/app/textos/$1"
 

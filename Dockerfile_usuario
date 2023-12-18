@@ -10,7 +10,21 @@ apt-get install -y file
 RUN mkdir -p /app/outputs/img /app/outputs/snd /app/outputs/txt
 
 # Copy the clasificador.sh script into the container
-COPY clasificador.sh /app/
+COPY menu.sh /app/
+
+COPY opt/src/clasificador.sh /app/
+
+COPY organizador_archivos.sh /app/
+
+COPY opt/src/analizar_textos.sh /app/
+
+COPY opt/src/encontrar_correos.sh /app/
+
+COPY opt/src/long_palabras.sh /app/
+
+COPY opt/src/palindromo.sh /app/
+
+COPY monitor.sh /app/
 
 # Run the clasificador.sh script
-CMD ["/bin/bash", "/app/clasificador.sh"]i
+CMD ["/bin/bash", "/app/menu.sh"]i

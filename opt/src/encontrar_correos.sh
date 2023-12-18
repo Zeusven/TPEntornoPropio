@@ -5,7 +5,7 @@ if [ "$#" -eq 0 ]; then
     exit 1
 fi
 
-archivo=$1
+archivo=/app/textos/$1
 
 # Usamos egrep con una expresión regular para encontrar direcciones de correo electrónico
 direcciones=$(egrep -o -i '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]+\b' "$archivo")

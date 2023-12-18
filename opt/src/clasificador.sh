@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Mueve al directorio los archivos para clasificar
-cd /home/Escritorio/DockerTP/outputs
+cd /app/outputs
 
 # Recorre cada archivo
 for file in *; do

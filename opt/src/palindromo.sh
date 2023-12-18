@@ -5,7 +5,7 @@ if [ "$#" -eq 0 ]; then
     exit 1
 fi
 
-archivo=$1
+archivo=/app/textos/$1
 
 # Leer el contenido del archivo proporcionado
 texto=$(cat "$archivo")

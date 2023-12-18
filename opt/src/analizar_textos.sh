@@ -25,15 +25,15 @@ while true; do
                 case $opcion_analisis in
                     a)
                         echo "Analizando longitud de palabras..."
-                        ./long_palabras.sh "$archivo"
+                        /app/long_palabras.sh "$archivo"
                         ;;
                     b)
                         echo "Buscando palíndromos..."
-                        ./palindromo.sh "$archivo"
+                        /app/palindromo.sh "$archivo"
                         ;;
                     c)
                         echo "Buscando direcciones de correo..."
-                        ./encontrar_correos.sh "$archivo"
+                        /app/encontrar_correos.sh "$archivo"
                         ;;
                     d)
                         echo "Volviendo al menú principal."

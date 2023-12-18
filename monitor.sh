@@ -8,12 +8,12 @@ DISK_USO=$(df -h / | awk '$NF=="/"{print $5}')
 ESPACIO_LIBRE=$(df -h / | awk '$NF=="/"{print $4}')
 
 # Crear un informe
-REPORT="Uso de CPU: $CPU_USO%\n Uso de RAM: $RAM_USO MB\nProcesos: $PROCESOS\n Uso de DICO: $DISK_USO\n Espacio libre: $ESPACIO_LIBRE"
+REPORT="Uso de CPU: $CPU_USO%\n Uso de RAM: $RAM_USO MB\nProcesos: $PROCESOS\n Uso de DISCO: $DISK_USO\n Espacio libre: $ESPACIO_LIBRE"
 
 # Mostrar el informe en pantalla
 echo -e "Monitoreando el sistema...\n$REPORT"
 
 # Guardar el informe en un archivo
-echo -e "$REPORT" > /home/Escritorio/DockerTP/outputs/report_$(date '+%d_%m_%Y:%H_%M_%S').txt
+echo -e "$REPORT" > /app/outputs/report_$(date '+%d_%m_%Y:%H_%M_%S').txt
 
 echo "Informe creado. Finalizando el script."

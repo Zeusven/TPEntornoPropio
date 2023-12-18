@@ -13,15 +13,15 @@ while true; do
         1)
             echo "Ingrese el nombre del archivo a procesar:"
             read archivo
-            ./clasificador.sh "$archivo"
+            /app/clasificador.sh "$archivo"
             ;;
         2)
             echo "Monitoreando el sistema..."
-            ./monitor.sh
+            /app/monitor.sh
             ;;
         3)
             echo "Analizando textos..."
-            ./analizar_textos.sh
+            /app/analizar_textos.sh
             ;;
         4)
             echo "Saliendo del menú."
