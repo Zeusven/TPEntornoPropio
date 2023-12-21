@@ -1,15 +1,16 @@
 
-# Use an official Ubuntu runtime as a parent image
+#utiliza una imagen base de Ubuntu 
 FROM ubuntu:latest
 
-# Install necessary packages
+# Instala dependencias necesarias
 RUN apt-get update && \
 apt-get install -y file
 
-# Create a directory to store classified files
+# Crea un directorio para almacenar archivos clasificados
 RUN mkdir -p /app/outputs/img /app/outputs/snd /app/outputs/txt
 
-# Copy the clasificador.sh script into the container
+# Copia los scripts y archivos necesarios al contenedor
+
 COPY menu.sh /app/
 
 COPY opt/src/clasificador.sh /app/
@@ -26,5 +27,5 @@ COPY opt/src/palindromo.sh /app/
 
 COPY monitor.sh /app/
 
-# Run the clasificador.sh script
+# Ejecuta el script menu.sh cuando se inicia el contenedor
 CMD ["/bin/bash", "/app/menu.sh"]i

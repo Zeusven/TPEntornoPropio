@@ -1,24 +1,24 @@
-# Use an official Ubuntu runtime as a parent image
+# Utiliza una imagen base oficial de Ubuntu como imagen padre
 FROM ubuntu:latest
 
-# Install necessary packages
+# Instala paquetes necesarios
 RUN apt-get update && \
     apt-get install -y cron imagemagick ffmpeg procps
 
-# Create a directory to store generated files
+# Crea un directorio para almacenar archivos generados
 RUN mkdir -p /app/outputs
 
-# Copy the generador.sh script into the container
+# Copia el script generador.sh al contenedor
 COPY generador.sh /app/
 
-# Copy the crontab file into the container
+# Copia el archivo crontab dentro del contenedor
 COPY ./etc/crontab /etc/cron.d/generador-cron
 
-# Set permissions and apply the cron job
+# Establece permisos y aplica la tarea programada del cron
 RUN chmod 0644 /etc/cron.d/generador-cron && \
     crontab /etc/cron.d/generador-cron
 
-# Run cron and keep the container running
+# Ejecuta el cron y mantiene el contenedor en ejecucion
 CMD cron -f
 
 
