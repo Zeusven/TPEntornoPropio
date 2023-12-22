@@ -9,7 +9,8 @@ RUN apt-get update && \
 RUN mkdir -p /app/outputs
 
 # Copia el script generador.sh al contenedor
-COPY generador.sh /app/
+COPY  cron-generador.sh app/
+
 
 # Copia el archivo crontab dentro del contenedor
 COPY ./etc/crontab /etc/cron.d/generador-cron

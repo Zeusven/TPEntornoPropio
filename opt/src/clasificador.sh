@@ -10,9 +10,9 @@ for file in *; do
 
     # Mueve el archivo a la carpeta apropiada según su tipo
     case "$file_type" in
-        image*) mv "$file" /home/Escritorio/DockerTP/outputs/img/ ;;
-        audio*) mv "$file" /home/Escritorio/DockerTP/outputs/snd/ ;;
-        text*)  mv "$file" /home/Escritorio/DockerTP/outputs/txt/ ;;
+        image*) mv "$file" /app/outputs/img/ ;;
+        audio*) mv "$file" /app/outputs/snd/ ;;
+        text*)  mv "$file" /app/outputs/txt/ ;;
         *)      echo "Unknown file type: $file_type" ;;
     esac
 done
